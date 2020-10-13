@@ -75,11 +75,22 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(inning, numOfInnings){
+  let homeScore = 0;
+  let awayScore = 0;
 
-  /*Code Here*/
+  for (let i = 1; i <= numOfInnings; i++) {
+    homeScore += inning();
+    awayScore += inning();
+  }
 
+  return {
+    Home: `${homeScore}`,
+    Away: `${awayScore}`
+  }
 }
+
+console.log(newTest = finalScore(inning, 9));
 
 /* Task 4: 
 
