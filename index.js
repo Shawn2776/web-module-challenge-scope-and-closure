@@ -27,9 +27,9 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ */ `Counter1 is all internal. Counter2 uses a global variable outside of the function` /*
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ */ /*
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
 */
@@ -43,6 +43,10 @@ function counterMaker() {
 }
 
 const counter1 = counterMaker();
+console.log(`Test: ${counter1()}`)
+console.log(`Test: ${counter1()}`)
+console.log(`Test: ${counter1()}`)
+console.log(`Test: ${counter1()}`)
 
 // counter2 code
 let count = 0;
@@ -50,6 +54,11 @@ let count = 0;
 function counter2() {
   return count++;
 }
+
+console.log(`Test2: ${counter2()}`)
+console.log(`Test2: ${counter2()}`)
+console.log(`Test2: ${counter2()}`)
+console.log(`Test2: ${counter2()}`)
 
 
 /* Task 2: inning() 
