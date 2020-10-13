@@ -27,11 +27,11 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- */ `Counter1 is all internal. Counter2 uses a global variable outside of the function` /*
+ */ const str1 = `Counter1 is all internal. Counter2 uses a global variable outside of the function` /*
  * 2. Which of the two uses a closure? How can you tell?
- */ /*
+ */ const str2 = `Both use closure, but differently. Counter1 goes outside the main function, and counter2 goes outside its internal function`/*
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ */ const str3 = `For the most parent, you're gonna want to use counter1, I believe, so you don't have to worry about the variable changing`/*
 */
 
 // counter1 code
@@ -150,3 +150,20 @@ function finalScore2(inning, numOfInnings){
 }
 
 finalScore2(inning, 9);
+
+
+function personalDice(name){
+  return function(){
+      // generate random number between 1 and 6
+    const newRoll = Math.floor(Math.random() * 6);
+    console.log(`${name} rolled a ${newRoll}`)
+  }
+}
+
+const dansRoll = personalDice("Dan");
+
+const zoesRoll = personalDice("Zoe");
+
+
+dansRoll();
+dansRoll();

@@ -41,7 +41,7 @@ Find the file `index.js` and complete the tasks.
 
 Edit the `ReadMe` file with your answers.
 
-1. In your own words, define closure (1-2 sentences).
+1. In your own words, define closure (1-2 sentences). >>> Closure is accessing a variable or function outside of the function
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -60,6 +60,7 @@ const zoesRoll = personalDice("Zoe");
 
 dansRoll();
 dansRoll();
+zoesRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
