@@ -60,7 +60,7 @@ function inning(){
   return Math.floor(Math.random() * Math.floor(3));
 }
 
-
+console.log(inning());
 /* Task 3: finalScore()
 
 Write a higher order function called `finalScore` that accepts the callback function `inning` (from above) and a number of innings and and returns the final score of the game in the form of an object.
@@ -113,8 +113,31 @@ and returns the score at each pont in the game, like so:
 Final Score: awayTeam - homeTeam */
 
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningScore, inning, numOfInnings) {
+  
 }
 
 
+function finalScore2(inning, numOfInnings){
+  let homeScore = 0;
+  let awayScore = 0;
+
+  for (let i = 1; i <= numOfInnings; i++) {
+    homeScore += inning();
+    awayScore += inning();
+    
+    if (i === 1) {
+      console.log(`${i}st inning: Away: ${awayScore} - Home: ${homeScore}`);
+    } else if (i === 2) {
+      console.log(`${i}nd inning: Away: ${awayScore} - Home: ${homeScore}`);
+    } else if(i === 3) {
+      console.log(`${i}rd inning: Away: ${awayScore} - Home: ${homeScore}`);
+    } else {
+      console.log(`${i}th inning: Away: ${awayScore} - Home: ${homeScore}`);
+    }
+  }
+
+  return console.log(`Final Score: Away: ${awayScore} - Home: ${homeScore}`);
+}
+
+finalScore2(inning, 9);
